@@ -1,0 +1,229 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+#menu {
+    background-color: #074b1f;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+#menu span {
+    flex-grow: 1;
+}
+
+#menu a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+#menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #074b1f;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 6px;
+    padding: 10px 0;
+    width: 190px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #056319;
+}
+
+.dropdown .goto {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+/* Estilos responsivos */
+/* Menú y Dropdown en pantallas pequeñas */
+@media (max-width: 768px) {
+    #menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #074b1f;
+        padding: 15px 10px;
+        gap: 10px;
+        flex-wrap: wrap; /* Asegura que los elementos se ajusten si hay muchos */
+    }
+
+    #menu span {
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    #menu a {
+        color: #ffffff;
+        padding: 10px 15px;
+        text-align: center;
+
+        margin: 5px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    #menu a:hover {
+        background-color: #43a047;
+        transform: translateY(-2px);
+    }
+
+    /* Dropdown mantiene su estilo */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #056319;
+        min-width: 160px;
+        z-index: 1;
+        border-radius: 5px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        color: #ffffff;
+        padding: 10px;
+        text-align: left;
+        background-color: #056319;
+        border-radius: 5px;
+        display: block;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #43a047;
+    }
+
+}
+
+#results-table-container {
+    width: 90%;
+    height: 500px;
+    margin: 20px auto;
+    overflow-x: auto;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#results-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#results-table th,
+#results-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#results-table th {
+    background-color: #074b1f;
+    color: white;
+    text-align: center;
+    position: sticky;
+}
+
+#results-table td {
+    text-align: center;
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#button-container button {
+    background-color: #074b1f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+#button-container button:hover {
+    background-color: #056319;
+    transform: translateY(-2px);
+}
+
+#button-container button:active {
+    transform: translateY(0);
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.action-buttons button {
+    background-color: #074b1f;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background-color: #056319;
+    transform: translateY(-2px);
+}
+
+.action-buttons button:active {
+    transform: translateY(0);
+}
