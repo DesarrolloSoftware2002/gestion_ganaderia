@@ -10,12 +10,13 @@ require "../config/validar_sesion.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Gestión Datos Ganadería</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/principal.css">
 </head>
 
 <body>
     <div id="menu">
-        <span><a href="/SGAGV/views/pagPrincipal.php">SGDGV</a></span>
+        <span><a href="pagPrincipal.php">SGDGV</a></span>
         <a href="../config/logout.php">Cerrar Sesión</a>
     </div>
     

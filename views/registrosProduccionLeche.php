@@ -17,13 +17,14 @@ while ($row = pg_fetch_assoc($result)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Gestión Datos Ganadería</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../css/leche.css">
 </head>
 
 <body>
     <div id="menu">
-    <span><a href="/SGAGV/views/pagPrincipal.php">SGDGV</a></span>
+    <span><a href="pagPrincipal.php">SGDGV</a></span>
         <div class="dropdown">
             <a href="#" class="goto">Ir a</a>
             <div class="dropdown-content">
