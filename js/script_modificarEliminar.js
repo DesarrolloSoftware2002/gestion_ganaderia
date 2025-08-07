@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     fetch('../config/obtener_registros.php')
         .then(response => response.json())

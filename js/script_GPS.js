@@ -39,16 +39,21 @@ function descargarReporte() {
     }
 
     const headers = Array.from(headerRow.querySelectorAll('th')).map(th => th.textContent.trim()).join(',');
-    // Generar contenido CSV
+
     const csvContent = [
-        headers, // Agregar encabezado
+        headers,
         ...rows.map(row => {
             const cells = Array.from(row.querySelectorAll('td')).map(cell => cell.textContent.trim());
-            return cells.join(',');
+            return cells.map((cell, index) => {
+                if (index === 2) { // Columna GPS
+                    return `"${cell}"`;
+                }
+                return cell;
+            }).join(',');
         })
     ].join('\n');
 
-    const BOM = '\uFEFF'; // Marca de orden de bytes (Byte Order Mark)
+    const BOM = '\uFEFF';
     const blob = new Blob([BOM + csvContent], { type: 'text/csv;charset=utf-8;' });
 
     const url = URL.createObjectURL(blob);
